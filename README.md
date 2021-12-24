@@ -1,4 +1,4 @@
-# titanic
+# Titanic
 
 ## Overview
 In this project, [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic/overview), the famous dataset for machine-learning was analyzed.
