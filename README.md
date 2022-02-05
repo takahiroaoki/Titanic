@@ -6,15 +6,28 @@ In this project, [Titanic - Machine Learning from Disaster](https://www.kaggle.c
 ## Requirement
 - Windows 10
 - [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop) 4.2.0
-- VSCode with the extention of Remote Development 0.21.0
 
 ## How to use
-1. Open the "titanic" directory (i.e. this project itself) in a container through Remote Development extention of VSCode.
-2. Open ./main.ipynb and run it from top to bottom.
+1. (If you need, )make your access token of [LINE Notify](https://notify-bot.line.me/ja/) and declare it in ./execute.sh
+   ```
+   MY_TOKEN="LINE NOTIFY TOKEN"
+   ```
+   ** Be careful not to commit and push the concrete access token. **
+2. At the root directory of this project, /titanic, execute the following command in order to boot up a container.
+   ```
+   $ docker-compose up -d
+   ```
+3. Execute the following command in order to execute main.ipynb.
+   ```
+   $ docker exec titanic /bin/bash execute.sh
+   ```
+4. Check the ./output directory.
+
+If you use VSCode, you can attach the docker container throught the extension of Remote Development.
 
 ## Frequent Error
 ### Could not find renderer
-Sometimes we are encountered by the following error.
+Sometimes we are encountered by the following error when attached to the container through VSCode.
 ```
 Error loading preloads: Could not find renderer
 ```

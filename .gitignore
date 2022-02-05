@@ -1,2 +1,6 @@
 # python cache
 *.pyc
+
+# output
+output/**/*.md
+output/**/*.png
