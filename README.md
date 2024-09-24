@@ -9,7 +9,11 @@ In this project, [Titanic - Machine Learning from Disaster](https://www.kaggle.c
 
 ## How to use
 
-1. (If you need, )make your access token of [LINE Notify](https://notify-bot.line.me/ja/) and declare it in ./execute.sh
+1. Download data
+
+Download `train.csv`, `test.csv`, `gender_submission.csv` from [here](https://www.kaggle.com/competitions/titanic/overview) and deploy them under `data` directory.
+
+4. (If you need, )make your access token of [LINE Notify](https://notify-bot.line.me/ja/) and declare it in ./execute.sh
    
    ```
    MY_TOKEN="LINE NOTIFY TOKEN"
@@ -17,18 +21,18 @@ In this project, [Titanic - Machine Learning from Disaster](https://www.kaggle.c
 
    **Be careful not to commit and push the concrete access token.**
 
-2. At the root directory of this project, /titanic, execute the following command in order to boot up a container.
+5. At the root directory of this project, /titanic, execute the following command in order to boot up a container.
    
    ```
    $ docker-compose up -d
    ```
 
-3. Execute the following command in order to execute main.ipynb.
+6. Execute the following command in order to execute main.ipynb.
    ```
    $ docker exec titanic /bin/bash execute.sh
    ```
 
-4. Check the ./output/"Specified Directory"/ directory. You can specify DIR_NAME in ./execute.sh.
+7. Check the ./output/"Specified Directory"/ directory. You can specify DIR_NAME in ./execute.sh.
 
 If you use VSCode, you can attach the docker container throught the extension of Remote Development.
 
